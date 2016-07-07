@@ -20,7 +20,7 @@ Test running service:
 curl http://localhost:8888
 ```
 
-## SIMPLE_DB
+## SIMPLE-DB
 
 Build project and Docker image:
 ```
@@ -55,7 +55,7 @@ Test running service:
 curl http://localhost:8080
 ```
 
-### Usefull Docker commands
+### Useful Docker commands
 - SSH to a running ```simple``` or ```simple-db``` container
 ```
 docker exec -it simple /bin/ash
