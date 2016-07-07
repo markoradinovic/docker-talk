@@ -1,0 +1,23 @@
+version: '2'
+services:
+  simple-db:
+    image: markoradinovic/simple-db
+    environment:
+      PG_URL: postgres:5432/demo
+      PG_USER: pgadmin
+      PG_PASS: pgadmin
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:9.5
+    environment:
+      - POSTGRES_USER=pgadmin
+      - POSTGRES_PASSWORD=pgadmin
+      - POSTGRES_DB=demo
+    ports:
+      - "5432:5432"
+networks:
+  default:
+    driver: bridge
